@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: translate-container
-        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/translate:20
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/translate:21
         ports:
         - containerPort: 8080
 
