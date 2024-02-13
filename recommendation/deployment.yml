@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: recommend-container
-        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/recommendation:16
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/recommendation:17
         ports:
         - containerPort: 8080
 ---
