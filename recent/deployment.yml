@@ -4,7 +4,7 @@ metadata:
   name: recent-deployment
   namespace: fs-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: recent
