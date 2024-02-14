@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: recent-container
-        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/recent:1
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/recent:7
         ports:
         - containerPort: 8080
 
