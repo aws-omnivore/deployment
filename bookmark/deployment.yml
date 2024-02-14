@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookmark-backend
+  namespace: fs-service
+spec:
+  selector:
+    matchLabels:
+      app: bookmark
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bookmark
+    spec:
+      containers:
+      - name: bookmark
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/bookmark:4
+        ports:
+        - containerPort: 8080
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookmark-service
+  namespace: fs-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: bookmark
