@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bookmark
-        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/bookmark:4
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/bookmark:5
         ports:
         - containerPort: 8080
 ---
