@@ -17,7 +17,7 @@ spec:
       - name: translate-container
         image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/translate:30
         ports:
-        - containerPort: 5005
+        - containerPort: 8080
 
 
 ---
@@ -32,4 +32,4 @@ spec:
   ports:        
     - protocol: TCP 
       port: 80
-      targetPort: 5005
+      targetPort: 8080
