@@ -27,9 +27,9 @@ metadata:
   name: translate-service
   namespace: fs-translate
 spec:
-  type: ClusterIP
   selector:
     app: translate
   ports:        
-    - port: 80
+    - protocol: TCP 
+      port: 80
       targetPort: 8080
