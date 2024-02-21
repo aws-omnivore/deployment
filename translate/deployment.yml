@@ -4,7 +4,7 @@ metadata:
   name: translate-deployment
   namespace: fs-translate
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: translate
