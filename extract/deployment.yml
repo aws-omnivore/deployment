@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: extract-backend
+  namespace: fs-extract
+spec:
+  selector:
+    matchLabels:
+      app: extract-tag
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: extract-tag
+    spec:
+      containers:
+      - name: extract-container
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/extract:latest
+        # image: public.ecr.aws/n2v6w9r2/extract:latest
+        ports:
+        - containerPort: 5000
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: extract-service
+  namespace: fs-extract
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: extract-tag
