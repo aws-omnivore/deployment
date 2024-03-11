@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: extract-container
-        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/extract:34
+        image: 825958448855.dkr.ecr.ap-northeast-2.amazonaws.com/extract:35
         
         ports:
         - containerPort: 5000
